@@ -5,11 +5,7 @@ public:
         dp[0] = 0;
         dp[1] = 1;
         if (n == 1) return 1;
-        vector<int> sqrts;
-        int sqrt_n = int(sqrt(n)) + 1;
-        for (int s = 1; s <= sqrt_n; s++) {
-            sqrts.push_back(s * s);
-        }
+
         for (int i = 2; i <= n; i++) {
             dp[i] = i;
             for (int j = 1; j*j <= i; j++) {
